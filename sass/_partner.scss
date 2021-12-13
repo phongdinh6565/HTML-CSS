@@ -1,0 +1,18 @@
+.partner {
+    margin-bottom: 50px;
+    &-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0 60px;
+    }
+    
+}
+@media screen and (max-width: 1023px){
+    .parner {
+        padding-bottom: 25px;
+    }
+    .partner-container {
+        gap: 0 30px;
+    }
+}

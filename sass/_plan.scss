@@ -1,0 +1,114 @@
+.plan {
+    padding: 80px 0 35px;
+    background: linear-gradient(180deg, #F8F8F8 -45.04%, rgba(248, 248, 248, 0) 88.56%);
+    &-container {
+        margin-bottom:150px
+    }
+    &-header {
+        margin-bottom: 60px;
+    }
+    &-main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0 50px;
+    }
+    &-image img {
+        margin: 0 auto;
+    }
+    &-item {
+        background: #FFFFFF;
+        border: 2px solid #DDDDDD;
+        border-radius: 10px;
+        padding: 80px 40px 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &-heading {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: calc(30 / 18);
+        margin: 30px 0;
+    }
+    &-list {
+        list-style-type: none;
+        
+    }
+    &-info {
+        display: flex;
+        align-items: center;
+        gap: 0 20px;
+        margin-bottom: 10px;
+        font-size: 14px;
+        span {
+            line-height: calc(30 / 14);
+        }
+    }
+    &-info:last-child {
+        margin-bottom: 50px;
+    }
+    
+    &-pricing {
+        font-size: 25px;
+        margin-bottom:20px ;
+        margin-top: auto;
+    }
+    .btn {
+        width: 100%
+    }
+}
+
+.plan-item.is-active {
+    border: 2px solid $primary-color;
+}
+.plan-item:hover {
+    border: 2px solid $primary-color;
+    .btn {
+        background-color: $primary-color;
+        color: white;
+    }
+}
+
+.network {
+    &-header {
+        margin-bottom: 155px;
+    }
+}
+
+@media screen and (max-width: 1023px){
+    .plan {
+        padding: 40px 0 18px;
+    }
+    .plan-container {
+        margin-bottom:75px
+    }
+    .plan-main {
+        display: grid;
+        justify-content: flex-start;
+        grid-auto-columns: 310px;
+        grid-auto-flow: column;
+        grid-gap: 0 30px;
+        overflow: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-snap-stop: always;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        -webkit-overflow-scrolling: touch;
+        scroll-padding: 1rem;
+        grid-template-columns: unset;
+        margin-bottom: 50px;
+      }
+      .plan-main::-webkit-scrollbar {
+        display: none;
+        width: 0;
+      }
+      .plan-main > * {
+        scroll-snap-align: start;
+      }
+      .network {
+        &-header {
+            margin-bottom: 80px;
+        }
+    }
+}

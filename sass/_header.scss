@@ -1,0 +1,39 @@
+.header {
+    padding-top: 50px;
+    padding-bottom: 90px;
+    &-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &-auth{
+        display: flex;
+        align-items: center;
+        gap: 0 30px;
+        text-transform: capitalize;
+    }
+    &-signin{
+        font-weight: 500;
+        color: $heading-color;
+    }
+   
+}
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0 40px;
+    &-link {
+        color: inherit;
+    }
+}
+
+@media screen and (max-width: 1023px){
+    .header {
+        padding: 25px 0 45px;
+    }
+    .header-auth {
+        display: none;
+    }
+    
+}
